@@ -4,14 +4,15 @@ class CreateCostumes < ActiveRecord::Migration[5.1]
 # By convention, the class name should match the part of the
 # file name after the number, so in this case:
 # 002_create_costumes.rb becomes class CreateCostumes
-  change
-  create_table :costumes do |t|
-    t.string :name
-    t.boolean :price
-    t.string :imageurl
-    t.string :size
-    t.timestamps
-  end 
+  def change
+    create_table :costumes do |t|
+      t.string :name
+      t.boolean :price
+      t.string :imageurl
+      t.string :size
+      t.timestamps
+    end 
+  end
 end
 
 # Define a change method in which to do the migration
